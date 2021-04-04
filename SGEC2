@@ -35,7 +35,7 @@ resource "aws_instance" "terraform_ec2" {
   ami           = "var.ami_id"
   instance_type = "t2.micro"
   key_name = "terraform-course"
-  security_groups = ["aws_security_group.terraform_ec2_sg.id"]
+  security_groups = [aws_security_group.terraform_ec2_sg.id]
   
   tags = {
     Name = "Terraform EC2 Instance"
